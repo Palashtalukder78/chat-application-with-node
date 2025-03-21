@@ -1,0 +1,31 @@
+{
+  "name": "chat-app-with-shumit-vai",
+  "version": "1.0.0",
+  "description": "practice node-express,mongoose, socketIO",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Palashtalukder78/chat-application-with-node.git"
+  },
+  "author": "Md Ariful Islam Palash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Palashtalukder78/chat-application-with-node/issues"
+  },
+  "homepage": "https://github.com/Palashtalukder78/chat-application-with-node#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "multer": "^1.4.5-lts.2"
+  }
+}
