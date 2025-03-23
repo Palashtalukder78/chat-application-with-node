@@ -7,7 +7,7 @@ function avatarUpload(req, res, next) {
     1000000,
     "only jpg,jpeg and png allowed"
   );
-  //call the middleware function
+  //call the middleware function for error handle here
   upload.any()(req, res, (err) => {
     if (err) {
       res.status(500).json({
