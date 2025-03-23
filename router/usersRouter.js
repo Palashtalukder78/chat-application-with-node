@@ -5,7 +5,10 @@ const express = require("express");
 const { getUsers } = require("../controller/usersController");
 const decorateHTMLResponse = require("../middlewares/common/decorateHTMLResponse");
 const avatarUpload = require("../middlewares/users/avatarUpload");
-const { addUserValidator } = require("../middlewares/users/usersValidator");
+const {
+  addUserValidator,
+  addUserValidationHandler,
+} = require("../middlewares/users/usersValidator");
 
 const router = express.Router();
 
@@ -13,6 +16,6 @@ const router = express.Router();
 router.get("/", decorateHTMLResponse("Users"), getUsers);
 
 //post user
-router.post("/", avatarUpload, addUserValidator);
+router.post("/", avatarUpload, addUserValidator, addUserValidationHandler);
 
 module.exports = router;
