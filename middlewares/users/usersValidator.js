@@ -1,4 +1,4 @@
-const { check } = require("express-validator");
+const { check, validationResult } = require("express-validator");
 const createError = require("http-errors");
 const path = require("path");
 const { unlink } = require("fs");
@@ -59,7 +59,7 @@ const addUserValidationHandler = function (req, res, next) {
     next();
   } else {
     //removed Uploaded files
-    if (res.files.length > 0) {
+    if (req.files.length > 0) {
       const { filename } = req.files[0];
       unlink(
         path.join(__dirname, `../../public/avatars/${filename}`),

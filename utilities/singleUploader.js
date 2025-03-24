@@ -23,7 +23,8 @@ function uploader(
       const fileName =
         file.originalname
           .replace(fileExt, "")
-          .toLowerCase.split(" ")
+          .toLowerCase()
+          .split(" ")
           .join("-") +
         "-" +
         Date.now();
